@@ -14,6 +14,22 @@ function writePassword() {
 
   passwordText.value = password;
 
+  for (let i = 0; i < lowercase.length; i++) {
+    const element = lowercase[i];
+  }
+
+  for (let i = 0; i < uppercase.length; i++) {
+    const element = uppercase[i];
+  }
+
+  for (let i = 0; i < numeric.length; i++) {
+    const element = numeric[i];
+  }
+
+  for (let i = 0; i < symbols.length; i++) {
+    const element = symbols[i];
+  }
+
 }
 
 // Add event listener to generate button
