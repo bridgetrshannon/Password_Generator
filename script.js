@@ -14,6 +14,11 @@ function writePassword() {
 
   passwordText.value = password;
 
+  var lowercase = prompt("Do you want your password to include lowercase letters?");
+  var uppercase = prompt("Do you want your password to include uppercase letters?");
+  var numeric = prompt("How many characters do you want in your password?");
+  var symbols = prompt("Do you want your password to include special characters?");
+
   for (let i = 0; i < lowercase.length; i++) {
     const element = lowercase[i];
   }
