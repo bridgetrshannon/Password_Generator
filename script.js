@@ -61,7 +61,10 @@ var hasNumeric = confirm(
 
 // Conditional statement to see if user includes any type of characters
 if (
-  hasNumeric === false && hasUppercase === false && hasLowercase === false && hasSymbols === false 
+  hasNumeric === false && 
+  hasUppercase === false && 
+  hasLowercase === false && 
+  hasSymbols === false 
 ) {
   alert("You must choose at least one character type.");
   return;
@@ -79,14 +82,14 @@ if (
 
 // function to get random element from array
 function getRandom(arr) {
-  var randomIndex = Math.floor(Math.random() * arr.length);
-  var randomElement = arr[randomIndex];
-  return randomElement;
+  var randIndex = Math.floor(Math.random() * arr.length);
+  var randElement = arr[randIndex];
+  return randElement;
 }
 
 // function to generate password with what answers user gives
 function generatePassword() {
-var options = getPasswordOptions ();
+var options = getPasswordOptions();
 
 // variable that stores password while concatenating 
 var result = [];
@@ -109,7 +112,7 @@ characterTypes = characterTypes.concat (numeric); charactersUsed.push(getRandom(
 }
 
 // repeated same pattern from above, just updated variable properties
-if (options.hasLowercase
+if (options.hasLowercase) {
     characterTypes = characterTypes.concat (lowercase); charactersUsed.push(getRandom(lowercase));
 }
 
@@ -119,7 +122,7 @@ if (options.hasUppercase) {
 }
 
 // repeated same pattern from above, just updated variable properties
-if (options.hasSymbols {
+if (options.hasSymbols) {
     characterTypes = characterTypes.concat (symbols); charactersUsed.push(getRandom(symbols));
 }
 
@@ -147,6 +150,6 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 passwordText.value = password;
-
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
