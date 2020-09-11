@@ -26,17 +26,10 @@ return;
     return;
   }
 
-  if (length > 129) {
+  if (length > 128) {
     alert("Password length must be no more than 129 characters!");
     return;
   }
-
-  // May have to change this to booleans with false for each variable hasNumeric, hasLowercase, hasUppercase, hasSymbols
-  if (length === " ") {
-    alert("Password must contan characters!");
-    return;
-  }
-}
 
 var hasNumeric = confirm(
   "Do you want your password to include numbers?")
@@ -66,6 +59,13 @@ var hasNumeric = confirm(
 //   else (user?)choice = no to symbols
 //   then don't include symbols array to choose from
 
+// Conditional statement to see if user includes any type of characters
+if (
+  hasNumeric === false && hasUppercase === false && hasLowercase === false && hasSymbols === false 
+) {
+  alert("You must choose at least one character type.");
+  return;
+}
 
   var passwordOptions = {
   length: length,
@@ -104,22 +104,22 @@ var charactersUsed = [];
 // adds numeric characters array to characterTypes
 // Use getRandom to add random numeric character to charactersUsed
 
-if (options.hasNumericCharacters) {
+if (options.hasNumeric) {
 characterTypes = characterTypes.concat (numeric); charactersUsed.push(getRandom(numeric));
 }
 
 // repeated same pattern from above, just updated variable properties
-if (options.hasLowerCasedCharacters) {
+if (options.hasLowercase
     characterTypes = characterTypes.concat (lowercase); charactersUsed.push(getRandom(lowercase));
 }
 
 // repeated same pattern from above, just updated variable properties
-if (options.hasUpperCasedCharacters) {
+if (options.hasUppercase) {
     characterTypes = characterTypes.concat (uppercase); charactersUsed.push(getRandom(uppercase));
 }
 
 // repeated same pattern from above, just updated variable properties
-if (options.hasSpecialCharacters) {
+if (options.hasSymbols {
     characterTypes = characterTypes.concat (symbols); charactersUsed.push(getRandom(symbols));
 }
 
@@ -137,6 +137,7 @@ for (var i = 0; i < charactersUsed.length; i++) {
 
 // return result as a string and send to the function writePassword to write the password
 return result.join('');
+}
 
 // generate password button
   var generateBtn = document.querySelector("#generate");
@@ -145,9 +146,7 @@ return result.join('');
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
 passwordText.value = password;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-}
