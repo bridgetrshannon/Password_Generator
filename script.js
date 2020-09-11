@@ -108,22 +108,22 @@ var charactersUsed = [];
 // Use getRandom to add random numeric character to charactersUsed
 
 if (options.hasNumeric) {
-characterTypes = characterTypes.concat (numeric); charactersUsed.push(getRandom(numeric));
+characterTypes = (numeric); charactersUsed.push(getRandom(numeric));
 }
 
 // repeated same pattern from above, just updated variable properties
 if (options.hasLowercase) {
-    characterTypes = characterTypes.concat (lowercase); charactersUsed.push(getRandom(lowercase));
+    characterTypes = (lowercase); charactersUsed.push(getRandom(lowercase));
 }
 
 // repeated same pattern from above, just updated variable properties
 if (options.hasUppercase) {
-    characterTypes = characterTypes.concat (uppercase); charactersUsed.push(getRandom(uppercase));
+    characterTypes = (uppercase); charactersUsed.push(getRandom(uppercase));
 }
 
 // repeated same pattern from above, just updated variable properties
 if (options.hasSymbols) {
-    characterTypes = characterTypes.concat (symbols); charactersUsed.push(getRandom(symbols));
+    characterTypes = (symbols); charactersUsed.push(getRandom(symbols));
 }
 
 // for loop to select random values from the character types
@@ -153,3 +153,27 @@ passwordText.value = password;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// // 
+// // adds numeric characters array to characterTypes
+// // Use getRandom to add random numeric character to charactersUsed
+
+// if (options.hasNumeric) {
+//   characterTypes = characterTypes.concat (numeric); charactersUsed.push(getRandom(numeric));
+//   }
+  
+//   // repeated same pattern from above, just updated variable properties
+//   if (options.hasLowercase) {
+//       characterTypes = characterTypes.concat (lowercase); charactersUsed.push(getRandom(lowercase));
+//   }
+  
+//   // repeated same pattern from above, just updated variable properties
+//   if (options.hasUppercase) {
+//       characterTypes = characterTypes.concat (uppercase); charactersUsed.push(getRandom(uppercase));
+//   }
+  
+//   // repeated same pattern from above, just updated variable properties
+//   if (options.hasSymbols) {
+//       characterTypes = characterTypes.concat (symbols); charactersUsed.push(getRandom(symbols));
+//   }
+  
