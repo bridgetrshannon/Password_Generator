@@ -84,11 +84,20 @@ function getRandom(arr) {
   return randomElement;
 }
 
-
+// function to generate password with what answers user gives
 function generatePassword() {
 var options = getPasswordOptions ();
 
-}
+// variable that stores password while concatenating 
+var result = [];
+
+// variable that stores character types to include in password
+var characterTypes = [];
+
+// variable that includes one of each type of character to make sure it's used
+var charactersUsed = [];
+
+
 
   for (let i = 0; i < 27; i++) {
     const element = lowercase[i];
