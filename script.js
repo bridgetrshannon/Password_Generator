@@ -11,22 +11,30 @@ var symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", 
 //  
 
 // Created function to group together if else statements, confirms, and prompts
-function getPasswordOptions()
+function getPasswordOptions() {
 var length = parseInt(
   prompt("How many characters do you want in your password?")
   );
+
+  if (isNaN(length) === true) {
+alert("Password length must be a number");
+return
+
   }
 
   if (length < 8) {
-    alert("Password length must be at least 8 characters!")
+    alert("Password length must be at least 8 characters!");
+    return
   }
 
   if (length > 129) {
-    alert("Password length must be no more than 129 characters!")
+    alert("Password length must be no more than 129 characters!");
+    return
   }
 
   if (length === "") {
-    alert("Password must contan characters!")
+    alert("Password must contan characters!");
+    return
   }
 
 // if (aka else) (user?)choice is between 8 and 129 characters
@@ -54,8 +62,10 @@ var length = parseInt(
 //   then don't include symbols array to choose from
 
 
-function generatePassword()
+function generatePassword() {
+var options = getPasswordOptions ();
 
+}
   
   var together = [Math.floor(Math.random() * 9)]
   
