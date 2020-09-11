@@ -123,23 +123,22 @@ if (options.hasSpecialCharacters) {
     characterTypes = characterTypes.concat (symbols); charactersUsed.push(getRandom(symbols));
 }
 
+// for loop to select random values from the character types
+for (var i = 0; i < options.length; i++) {
+var characterTypes = getRandom
+(characterTypes);
+result.push(characterTypes);
+}
 
-  for (var i = 0; i < charactersUsed; i++) {
-    result[i] = charactersUsed;
+// for loops to include at least one of the charactersUsed
+for (var i = 0; i < charactersUsed.length; i++) {
+  result[i] = charactersUsed[i];
   }
 
-  for (let i = 0; i < 27; i++) {
-    const element = uppercase[i];
-  }
+// return result as a string and send to the function writePassword to write the password
+return result.join('');
 
-  for (let i = 0; i < 10; i++) {
-    const element = numeric[i];
-  }
-
-  for (let i = 0; i < 31; i++) {
-    const element = symbols[i];
-  }
-
+// generate password button
   var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
