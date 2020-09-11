@@ -67,7 +67,7 @@ var hasNumeric = confirm(
 //   then don't include symbols array to choose from
 
 
-  var PasswordOptions = {
+  var passwordOptions = {
   length: length,
   hasNumeric: hasNumeric,
   hasLowercase: hasLowercase,
@@ -75,6 +75,13 @@ var hasNumeric = confirm(
   hasSymbols: hasSymbols
   };
   return PasswordOptions;
+}
+
+// function to get random element from array
+function getRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  var randomElement = arr[randomIndex];
+  return randomElement;
 }
 
 
