@@ -98,6 +98,18 @@ var characterTypes = [];
 var charactersUsed = [];
 
 
+// Condition statements for array usage
+//  ----------------------------------
+
+// adds numeric characters array to characterTypes
+// Use getRandom to add random numeric character to charactersUsed
+
+if (options.hasNumericCharacters) {
+characterTypes = characterTypes.concat (numeric); charactersUsed.push(getRandom(numeric));
+
+}
+
+
 
   for (let i = 0; i < 27; i++) {
     const element = lowercase[i];
