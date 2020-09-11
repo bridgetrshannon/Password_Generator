@@ -77,7 +77,7 @@ if (
   hasUppercase: hasUppercase,
   hasSymbols: hasSymbols
   };
-  return PasswordOptions;
+  return passwordOptions;
 }
 
 // function to get random element from array
