@@ -31,7 +31,8 @@ return;
     return;
   }
 
-  if (length === "") {
+  // May have to change this to booleans with false for each variable hasNumeric, hasLowercase, hasUppercase, hasSymbols
+  if (length === " ") {
     alert("Password must contan characters!");
     return;
   }
@@ -66,13 +67,21 @@ var hasNumeric = confirm(
 //   then don't include symbols array to choose from
 
 
+  var PasswordOptions = {
+  length: length,
+  hasNumeric: hasNumeric,
+  hasLowercase: hasLowercase,
+  hasUppercase: hasUppercase,
+  hasSymbols: hasSymbols
+  };
+  return PasswordOptions;
+}
+
+
 function generatePassword() {
 var options = getPasswordOptions ();
 
 }
-  
-  var together = [Math.floor(Math.random() * 9)]
-  
 
   for (let i = 0; i < 27; i++) {
     const element = lowercase[i];
