@@ -106,13 +106,26 @@ var charactersUsed = [];
 
 if (options.hasNumericCharacters) {
 characterTypes = characterTypes.concat (numeric); charactersUsed.push(getRandom(numeric));
+}
 
+// repeated same pattern from above, just updated variable properties
+if (options.hasLowerCasedCharacters) {
+    characterTypes = characterTypes.concat (lowercase); charactersUsed.push(getRandom(lowercase));
+}
+
+// repeated same pattern from above, just updated variable properties
+if (options.hasUpperCasedCharacters) {
+    characterTypes = characterTypes.concat (uppercase); charactersUsed.push(getRandom(uppercase));
+}
+
+// repeated same pattern from above, just updated variable properties
+if (options.hasSpecialCharacters) {
+    characterTypes = characterTypes.concat (symbols); charactersUsed.push(getRandom(symbols));
 }
 
 
-
-  for (let i = 0; i < 27; i++) {
-    const element = lowercase[i];
+  for (var i = 0; i < charactersUsed; i++) {
+    result[i] = charactersUsed;
   }
 
   for (let i = 0; i < 27; i++) {
