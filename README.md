@@ -4,6 +4,9 @@
 
 The Password Generator is an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code.  It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
 
+GitHub Repository: https://github.com/bridgetrshannon/Password_Generator
+GitHub Page: https://bridgetrshannon.github.io/Password_Generator/ 
+
 ![Password Generator](passwordgenerator.png)
 
 ## Features
